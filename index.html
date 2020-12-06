@@ -1,1 +1,60 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>United States National Parks Search</title>
+    <link rel="shortcut icon" href="img42.jpeg">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <h1>Search National Parks by State</h1>
+  </header>
+
+  <div class="page-container">
+
+    <form id="js-form">
+      <p class="instructions">Enter 2-Letter State Abbreviations</p>
+      <div class="form-inputs">
+        <div class="input-container">
+          <label for="search-states">State: </label>
+          <input type="text" name="search-states" id="js-search-states" placeholder="example: CA, TX, AZ " required>
+        </div>
+        <div class="input-container">
+          <label for="search-results-limit">Max results: </label>
+          <input 
+            type="number" 
+            name="search-results-limit" 
+            id="js-search-results-limit" 
+            min="1"
+            step="1"
+            value="10" 
+            required>
+        </div>
+      </div>
+      <input type="submit" value="Find" id="submit-button">
+    </form>
+
+    <p id="js-error-message" class="error-message"></p>
+
+    <section id="results" class="hidden">
+      <h2>National Parks in <span id="js-state-names"></span></h2>
+      <ul id="js-parks-list" class="parks-list"></ul>
+    </section>
+
+  </div>
+
+  <script 
+    src="https://code.jquery.com/jquery-3.3.1.js" 
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" 
+    crossorigin="anonymous">
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
 
